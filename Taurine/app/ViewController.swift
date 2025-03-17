@@ -58,8 +58,8 @@ class ViewController: UIViewController, ElectraUI {
         jailbreakButton?.setTitle("Jailbreak", for: .normal)
         
         if ExploitManager.shared.chosenExploit == .nullExploit {
-            jailbreakButton?.isEnabled = false
-            jailbreakButton?.setTitle("Unsupported", for: .normal)
+            jailbreakButton?.isEnabled = true // Allow jailbreaking even if unsupported
+            jailbreakButton?.setTitle("Jailbreak Anyway", for: .normal)
         }
         
         if isJailbroken() {
